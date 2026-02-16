@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NovaStore - Products</title>
+<link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">NovaStore</div>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="cart.html">Cart 🛒</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+    </ul>
+</nav>
+
+<section class="container">
+    <h2>All Products</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="https://i.pinimg.com/1200x/7a/c2/3c/7ac23cd0f69721caf83e587286f81706.jpg" alt="Smart Watch">
+            <h3>Smart Watch</h3>
+            <p>$39.99</p>
+            <button onclick="addToCart('Smart Watch')">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/80/a9/dc/80a9dc3569bb0926c0e5daca5d5331a6.jpg" alt="Wireless Earbuds">
+            <h3>Wireless Earbuds</h3>
+            <p>$24.99</p>
+            <button onclick="addToCart('Wireless Earbuds')">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/96/7f/bf/967fbfa9c52fe10846e414f860c42095.jpg" alt="LED Lights">
+            <h3>LED Room Lights</h3>
+            <p>$19.99</p>
+            <button onclick="addToCart('LED Room Lights')">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>

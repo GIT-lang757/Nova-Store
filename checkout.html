@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NovaStore - Checkout</title>
+<link rel="stylesheet" href="checkout.css">
+<script src="js/script.js" defer></script>
+</head>
+<body>
+
+<nav>
+    <div class="logo">NovaStore</div>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="cart.html">Cart 🛒</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+    </ul>
+</nav>
+
+<section class="checkout-wrapper">
+    <!-- Left: Form -->
+    <div class="checkout-form">
+        <h2>Checkout</h2>
+        <form id="checkoutForm" onsubmit="return validateCheckout()">
+
+            <h3>Billing Details</h3>
+            <input type="text" placeholder="Full Name" id="fullname" required>
+            <input type="email" placeholder="Email Address" id="email" required>
+            <input type="tel" placeholder="Phone Number" id="phone" required>
+
+            <h3>Shipping Address</h3>
+            <input type="text" placeholder="Address Line 1" id="address1" required>
+            <input type="text" placeholder="Address Line 2 (optional)" id="address2">
+            <input type="text" placeholder="City" id="city" required>
+            <input type="text" placeholder="Country" id="country" required>
+            <input type="text" placeholder="Postal Code" id="postal" required>
+
+            <h3>Payment Method</h3>
+            <label><input type="radio" name="payment" value="credit" required> Credit / Debit Card</label><br>
+            <label><input type="radio" name="payment" value="paypal"> PayPal</label><br>
+            <label><input type="radio" name="payment" value="bank"> Bank Transfer</label><br>
+            <label><input type="radio" name="payment" value="mpesa"> M-Pesa</label><br>
+
+            <div id="bank-details">
+                <input type="text" placeholder="Bank Name" id="bankname">
+                <input type="text" placeholder="Account Number" id="account">
+            </div>
+
+            <label class="agreement">
+                <input type="checkbox" id="agree" required> I agree to the <a href="#">Terms & Conditions</a>
+            </label>
+
+            <button type="submit">Place Order</button>
+
+            <!-- Credit Card Icons -->
+            <div class="cards">
+                <img src="images/visa.png" alt="Visa">
+                <img src="images/mastercard.png" alt="Mastercard">
+                <img src="images/paypal.png" alt="PayPal">
+            </div>
+        </form>
+    </div>
+
+    <!-- Right: Order Summary -->
+    <div class="order-summary">
+        <h3>Order Summary</h3>
+        <div id="summary-items">
+            <div class="summary-item">
+                <span>Smart Watch x1</span>
+                <span>$39.99</span>
+            </div>
+            <div class="summary-item">
+                <span>Wireless Earbuds x2</span>
+                <span>$49.98</span>
+            </div>
+        </div>
+        <div class="summary-total">
+            <strong>Total:</strong> $89.97
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 NovaStore. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
