@@ -8,8 +8,9 @@ nav{
     justify-content:space-between;
     align-items:center;
     padding:15px 60px;
-    background:white;
+    background:rgb(150, 140, 140);
     box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    border-radius: 50px;
 }
 
 nav .logo{

@@ -1,5 +1,5 @@
 body{
-    background:#f8fafc;
+    background:#ffffff;
     font-family:'Poppins',sans-serif;
 }
 
@@ -8,8 +8,9 @@ nav{
     justify-content:space-between;
     align-items:center;
     padding:15px 60px;
-    background:white;
+    background:rgb(161, 150, 150);
     box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    border-radius: 50px;
 }
 
 nav .logo{
