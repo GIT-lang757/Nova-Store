@@ -1,77 +1,211 @@
-body{
-    background: #f0f4f8;
-    font-family: 'Poppins', sans-serif;
+/* Reset & basics */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 60px;
-    background:white;
-    box-shadow:0 2px 8px rgba(0,0,0,0.05);
+body {
+    background: #f5f5f5;
+    color: #333;
 }
 
-nav .logo{
-    font-size:26px;
-    font-weight:bold;
-    color:#4f46e5;
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-nav ul.menu{
-    list-style:none;
-    display:flex;
-    gap:25px;
+nav .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #1a73e8;
 }
 
-nav ul.menu a{
-    text-decoration:none;
-    color:#333;
+nav .menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
 }
 
-.hero{
-    text-align:center;
-    padding:150px 20px;
-    background:url("../images/hero-banner.jpg") center/cover no-repeat;
-    color:white;
+nav .menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-.hero h1{
-    font-size:48px;
-    margin-bottom:20px;
+nav .menu li a:hover {
+    color: #1a73e8;
 }
 
-.hero p{
-    font-size:20px;
-    margin-bottom:30px;
+/* Hero Section */
+.hero {
+    background: url('https://images.unsplash.com/photo-1612831455549-6d2a86e93ed3?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
 }
 
-.hero button{
-    padding:15px 30px;
-    border-radius:30px;
-    border:none;
-    background:white;
-    color:#4f46e5;
-    font-weight:bold;
-    cursor:pointer;
+.hero::after {
+    content: "";
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    background-color: rgba(0,0,0,0.4);
 }
 
-.hero button:hover{
-    transform:scale(1.05);
+.hero-content {
+    position: relative;
+    z-index: 1;
 }
 
-.trust{
-    padding:80px 60px;
-    text-align:center;
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
 }
 
-.trust h2{
-    margin-bottom:40px;
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 
-.trust-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:30px;
-    font-size:18px;
+.hero button {
+    padding: 1rem 2rem;
+    background-color: #1a73e8;
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.hero button:hover {
+    transform: scale(1.05);
+    background-color: #155ab6;
+}
+
+/* Featured Products */
+.featured {
+    padding: 5rem 3rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+.featured h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #1a73e8;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #1a73e8;
+    font-weight: bold;
+}
+
+.product-card button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    background-color: #1a73e8;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-card button:hover {
+    background-color: #155ab6;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Trust Section */
+.trust {
+    padding: 5rem 3rem;
+    text-align: center;
+    background-color: #f0f4ff;
+}
+
+.trust h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #1a73e8;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+}
+
+.trust-grid div {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    transition: transform 0.3s;
+}
+
+.trust-grid div:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    nav .menu {
+        gap: 1rem;
+    }
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
 }
